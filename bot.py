@@ -88,7 +88,7 @@ bot = Bot(token=TELEGRAM_TOKEN)
 dp = Dispatcher(storage=MemoryStorage())
 client = genai.Client(
     api_key=GEMINI_KEY,
-    http_options=genai_types.HttpOptions(timeout=60_000),
+    
 )
 
 histories = defaultdict(lambda: deque(maxlen=MAX_TURNS * 2))
